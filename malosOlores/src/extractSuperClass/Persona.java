@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ExtractSuperClass;
+package extractSuperClass;
 
 /**
  *
@@ -11,9 +11,9 @@ package ExtractSuperClass;
  */
 public class Persona {
     
-    public String Nombre;
-    public String Apellido;
-    public String Cedula;
+    protected String Nombre;
+    protected String Apellido;
+    protected String Cedula;
     protected String provincia;
     protected String pais;
     protected String ciudad;

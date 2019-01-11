@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ExtractSuperClass;
+package extractSuperClass;
 
-import ExtractSuperClass.Persona;
+import extractSuperClass.Persona;
 
 
 public class Cliente extends Persona {

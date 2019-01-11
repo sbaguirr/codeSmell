@@ -3,21 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conmalolor;
+package parameterizedMethod;
 
+import extractSuperClass.*;
+import conmalolor.EmployeeType;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
 
-public class Employee{ 
-    private String Nombre;
-    private String Apellido;
-    private String Cedula;
-    private String provincia;
-    private String pais;
-    private String ciudad;
-    private String direccion;
+public class Employee extends Persona{   
+
     private final float rmu = (float) 386.0;
     //salario del employee
     private float salary;
@@ -28,13 +24,11 @@ public class Employee{
 
     public Employee(float salary, float bonusPercentage, EmployeeType employeeType)    
     {        
+        super("Descconocido","Descconocido","0000000000");
         this.salary = salary;        
         this.bonusPercentage = bonusPercentage;        
         this.employeeType = employeeType;
-        this.Nombre = "Descconocido";
-        this.Apellido = "Descconocido";
-        this.Cedula = "0000000000";
-        this.cambiarDireccion("Ecuador", "Gye", "Guayas", "ESPOL Prosperina");
+        this.setLocation("Ecuador", "Gye", "Guayas", "ESPOL Prosperina");
     }
     //calcula el salario dependiendo del tipo de trabajador y entrega el décimo correspondiente cada 2 meses
     public float cs()
@@ -74,56 +68,5 @@ public class Employee{
         }
         return 0.0F;
     }
-        /**
-     * @return the Nombre
-     */
-    public String getNombre() {
-        return Nombre;
-    }
-
-    /**
-     * @param Nombre the Nombre to set
-     */
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    /**
-     * @return the Apellido
-     */
-    public String getApellido() {
-        return Apellido;
-    }
-
-    /**
-     * @param Apellido the Apellido to set
-     */
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
-    }
-
-    /**
-     * @return the Cedula
-     */
-    public String getCedula() {
-        return Cedula;
-    }
-
-    /**
-     * @param Cedula the Cedula to set
-     */
-    public void setCedula(String Cedula) {
-        this.Cedula = Cedula;
-    }
-    public String mostrarDireccion(){
-        String dir = pais + " - " + provincia + " - " + ciudad;
-        return  dir+ "\n" + direccion;
-    }
-    
-    public void cambiarDireccion(String nuevoPais, String ciudadnueva, String provinciaNueva, String direccionNueva){
-        pais = nuevoPais;
-        ciudad = ciudadnueva;
-        provincia = provinciaNueva;
-        direccion = direccionNueva;
-    }
+     
 }
