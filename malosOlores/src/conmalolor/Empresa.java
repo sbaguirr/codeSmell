@@ -36,12 +36,7 @@ public class Empresa {
     
     public void GuardarCliente(String Nombre, String Apellido, String Cedula){
         
-        if(Nombre.equals("") && Nombre.length()> 16 && Apellido.equals("") && Apellido.length()> 16 && !Cedula.equals("") && Cedula.length()< 10){
-                System.out.println("ingreso de datos incorrecto");
-        }else{
-            System.out.println("ingreso de datos correcto");
-
-        }// no estoy segura si esta correcto, creo que las condiciones pueden ir en variables locales, se soluciona long method
+        validarInformacion(Nombre, Apellido, Cedula);//Se soluciona lo de codigo duplicado
         Cliente cliente = new Cliente(Nombre, Apellido, Cedula);
         cliente.setLocation("Ecuador", "Guayaquil", "Guayas", "Alborada 3era etapa");
         this.clientes.add(cliente);
